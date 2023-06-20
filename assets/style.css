@@ -1,0 +1,199 @@
+/* normalize some shit */
+html {
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+pre {
+  font-family: monospace, monospace; 
+  font-size: 1em;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; 
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; 
+  font-size: 100%; 
+  line-height: 1.15; 
+  margin: 0;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+
+/* ok now the good stuff */
+html, body {
+  height: 100%;
+}
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1.1fr auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header { grid-area: header; }
+
+.main { grid-area: main; }
+
+.footer { grid-area: footer; }
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;  
+  align-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/**
+ * FLUID TYPE
+ *
+ * Scale text based on viewport and the following variables. Props should be unitless, but will be converted
+ * to REM units. E.G '1' will be converted to '1rem'
+ *
+ * --fluid-type-min-size: The smallest font size. Default 1
+ * --fluid-type-max-size: The largest font size: Default 2
+ * --fluid-type-min-screen: The smallest viewport size that this works for: Default 20
+ * --fluid-type-max-screen: The largest viewport size that this works for: Default 88
+ */
+ .fluid-type {
+  --fluid-type-min-size: 1;
+  --fluid-type-max-size: 2;
+  --fluid-type-min-screen: 20;
+  --fluid-type-max-screen: 88;
+
+  /* We multiply by 1rem to essentially stick a rem unit to a number. */
+  font-size: calc(
+    (var(--fluid-type-min-size) * 1rem) + (var(--fluid-type-max-size) - var(--fluid-type-min-size)) *
+      (100vw - (var(--fluid-type-min-screen) * 1rem)) /
+      (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
+  );
+}
+
+
+/*
+* SET LOCKS ON ELEMENTS
+*/
+h1.fluid-type {
+  --fluid-type-min-size: 2;
+  --fluid-type-max-size: 4;
+}
+
+h2.fluid-type {
+  --fluid-type-min-size: 1.5;
+  --fluid-type-max-size: 2.2;
+}
+
+blockquote.fluid-type {
+  --fluid-type-min-size: 1.2;
+  --fluid-type-max-size: 1.8;
+}
+
+
+
+
+/*
+* PRESENTATION STYLES
+*/
+body {
+  background: #f3f3f3;
+  color: #141414;
+  padding: 2rem 2rem 4rem;
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+p, ul, ol {
+  font-size: 1.25rem;
+  max-width: 75ch;
+}
+
+
+h1, h2, h3, blockquote {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+blockquote {
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+blockquote p {
+  font-size: 1em;
+}
+
+article {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+article > * + * {
+  margin-top: 1.8em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #ccc;
+  margin: 3em auto;
+  max-width: 30rem;
+}
+.subtitle {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  display: block;
+  clear: both;
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+  font-weight: bold;
+}
