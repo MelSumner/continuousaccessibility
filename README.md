@@ -4,4 +4,4 @@ Continuous Accessibility Website
 
 Content by Melanie Sumner unless otherwise noted.
 
-It’s fine to use the content if you give credit.
+To use any of the content here, please file an issue or contact me via email.

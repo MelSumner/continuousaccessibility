@@ -157,6 +157,14 @@ p, ul, ol {
   max-width: 75ch;
 }
 
+li:first-of-type, li + li {
+  margin-bottom: 0.5rem;
+}
+
+li:last-of-type {
+  margin-bottom: 0;
+}
+
 
 h1, h2, h3, blockquote {
   font-family: 'Playfair Display', serif;
@@ -167,6 +175,7 @@ blockquote {
   font-weight: 400;
   font-style: italic;
   line-height: 1.6;
+  text-align: center;
 }
 
 blockquote p {
@@ -189,6 +198,7 @@ hr {
   margin: 3em auto;
   max-width: 30rem;
 }
+
 .subtitle {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   display: block;
