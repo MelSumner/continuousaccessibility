@@ -34,7 +34,7 @@
       <h2 class="fluid-type">Historical challenges</h2>
       <p>There is not a sufficient way to quantify the full scope of digital accessibility (a11y) work, and a public recommendation for the quantification of accessibility work does not currently exist.</p>
       <p>Additionally, these challenges frequently exist:</p>
-      <ul>
+      <ul role="list" aria-label="challenges">
         <li>Limited visibility into the audit process and results. A11y audit results are typically only available for a few people. The results/reports themselves are often complex or difficult to use.</li>
         <li>Incomplete audit process. Often there is no context provided on an a11y scorecard/dashboard, so folks don’t have the correct insights needed to improve.</li>
         <li>Lack of sufficient methods to prevent regressions for tested code; while technical solutions for regression and snapshot testing exist, they are largely ineffective because they are not trained to recognize regression significance. Additionally, they do not often have policy support.</li>
@@ -53,7 +53,7 @@
       <p>In practice, achieving a given WCAG criterion requires that a set of actions, implementations, or policy updates that individually ensure for some portion of the success criterion (e.g., a particular use case) is met. As such, the most effective means of generating rapid, high-impact accessibility improvements for digital products is to deconstruct a WCAG success criterion into a subset of accessibility quality-control mechanisms: action steps that can be taken to comprehensively achieve an accessible experience.</p>
       <p>The process by which efficient improvements can be achieved matches that of the software development process in general-- tightly scoped, iterative, and distributed.</p>
       <p>A Continuous Accessibility strategy, then, can be divided into three parts:</p>
-      <ul>
+      <ul aria-label="continuous accessibility strategic parts">
         <li>A plan for the code that already exists</li>
         <li>A plan for the code that will be created</li>
         <li>A method to measure and report progress</li>
@@ -83,11 +83,11 @@
         <span class="subtitle">Actionable Outcome(s): Goal Setting</span>
       </h3>
       <p>
-        The <b>Total Criteria Count (TCC)</b> is the first item to establish as it will be the basis for all other metrics.
-        It is also likely to take the most amount of time to establish (relative to other metrics). An exact count of all WCAG criteria with which a digital product must comply must be established- with the full understanding that this count may (some may even argue, <em>should</em>) change over time. These changes should be tracked. </p>
+      The <b>Total Criteria Count (TCC)</b> is the first item to establish as it will be the basis for all other metrics.
+      It is also likely to take the most amount of time to establish (relative to other metrics). An exact count of all WCAG criteria with which a digital product must comply must be established- with the full understanding that this count may (some may even argue, <em>should</em>) change over time. These changes should be tracked.</p>
       <p>
         The Total Criteria Count should be an itemized list that includes:</p>
-      <ul>
+      <ul aria-label="total criteria count">
         <li>WCAG Success Criteria</li>
         <li>Criteria that are not already reflected in WCAG criteria (perhaps related to tooling, not covered by web
           content guidelines)</li>
@@ -110,7 +110,7 @@
         <span class="subtitle">Actionable Outcome(s): Problem Analysis, Goal Setting</span>
       </h3>
       <p>We must then identify additional baseline numbers from TCC line items, related to automation:</p>
-      <ul>
+      <ul aria-label="metrics for setting a baseline">
         <li>Criteria for which we can provide automated linting (static analysis) (Automated Linting Criteria Count
           (ALCC))</li>
         <li>Criteria for which we can provide automated testing (dynamic analysis) (Automated Testing Criteria Count
@@ -122,9 +122,8 @@
         We should determine which line items from TCC currently require manual testing but could reasonably have
         automated tests. This can help to determine future work. This number may also change over time, given a few
         variables:</p>
-      <ul>
-        <li>Reduction in possible # of ways to approach any given UI component (either self-imposed or via engineering
-          policy)</li>
+      <ul aria-label="variables that may influence criteria for which manual checks are currently required">
+        <li>Reduction in number of ways to approach any given UI component (either self-imposed or via engineering policy)</li>
         <li>Deeper analysis of a line item may show that the status may change (from “possible to automate” to “manual
           check” or vice versa)</li>
         <li>Changes to the success criteria (as WCAG grows to include devices and not just web, etc.)</li>
@@ -134,38 +133,17 @@
       <h3>Metric: Audit Results
         <span class="subtitle">Actionable Outcome(s): Problem Analysis, Trend Development</span>
       </h3>
-      <p>If apps are audited and scorecards are produced, these metrics are indicators of overall progress. As such, we
-        could analyze them from a few angles:</p>
-      <ul>
-        <li>What is the Total Bug Count?</li>
-        <li>Further breakdowns may be justifiable:
-          <ul>
-            <li>By Line of Business</li>
-            <li>By WCAG Success Criteria</li>
-          </ul>
-          </li>
-        <li>Valid Bug Count (VBC) (it may be more meaningful to look at VBC than TBC, or at least normalize the data to
-          account for the mean)</li>
-        <li> Bug Severity Count (ISC)
-          For bugs that are violations of WCAG conformance, we can categorize based on impact to the user: Severe,
-          Critical, Major, and Minor.
+      <p>If apps are audited and scorecards are produced, these metrics are indicators of overall progress. As such, they could be analyzed from a few angles:</p>
+      <ul aria-label="metrics that may indicate progress trends">
+        <li><b>Total Bug Count (TBC)</b>. Further breakdowns may be justifiable, such as by Line of Business or by WCAG Success Criteria</li>
+        <li><b>Valid Bug Count (VBC)</b>. It may be more meaningful to look at VBC than TBC, or at least normalize the data to account for the mean)</li>
+        <li><b>Bug Severity Count (ISC)</b>. For bugs that are violations of WCAG conformance, we can categorize based on impact to the user: Severe, Critical, Major, and Minor.
         </li>
-        <li>
-          Time To Resolution (TTR): How long does it take each team to resolve violations? </li>
-        <li>
-          What percent of the resolved violations are within the SLA for resolution?</li>
-        <li>
-          What are the blockers to violation resolution (is there a recognizable pattern that could inform tooling)?
-        </li>
-        <li>
-          What is the severity of those blockers?</li>
-        <li>
-          Relative Incident Frequency (RIF): Is there a WCAG violation that seems to appear more than the others?</li>
-        <li>
-          Conformance Exemption Count
-          (CEC): What LOBs have exemptions? How many? Why? This can inform process improvements. </li>
-        <li>Linting Automation Suppression Count (LASC)</li>
-        <li>Testing Automation Suppression Count (TASC)</li>
+        <li><b>Time To Resolution (TTR)</b>. How long does it take each team to resolve violations? What percent of the resolved violations are within the SLA for resolution? What are the blockers to violation resolution (is there a recognizable pattern that could inform tooling)? What is the severity of those blockers?</li>
+        <li>Relative Incident Frequency (RIF). Is there a WCAG violation that seems to appear more than the others?</li>
+        <li>Conformance Exemption Count (CEC). What LOBs have exemptions? How many? Why? This can inform process improvements.</li>
+        <li>Linting Automation Suppression Count (LASC) and Testing 
+        Automation Suppression Count (TASC). While the validity of suppressions should be examined, too many suppressions are indicators that issues are being hidden instead of resolved.</li>
         </ul>
         </p>
         <p>It is necessary to understand the audit process. This will show how the proposed metrics can be useful both
