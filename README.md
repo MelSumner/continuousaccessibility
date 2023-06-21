@@ -2,6 +2,4 @@
 
 Continuous Accessibility Website
 
-Content by Melanie Sumner unless otherwise noted.
-
-To use any of the content here, please file an issue or contact me via email.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/08f81673-9311-4dd6-828a-d77e959e631a/deploy-status)](https://app.netlify.com/sites/continuous-accessibility/deploys)
