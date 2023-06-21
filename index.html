@@ -140,10 +140,10 @@
         <li><b>Bug Severity Count (ISC)</b>. For bugs that are violations of WCAG conformance, we can categorize based on impact to the user: Severe, Critical, Major, and Minor.
         </li>
         <li><b>Time To Resolution (TTR)</b>. How long does it take each team to resolve violations? What percent of the resolved violations are within the SLA for resolution? What are the blockers to violation resolution (is there a recognizable pattern that could inform tooling)? What is the severity of those blockers?</li>
-        <li>Relative Incident Frequency (RIF). Is there a WCAG violation that seems to appear more than the others?</li>
-        <li>Conformance Exemption Count (CEC). What LOBs have exemptions? How many? Why? This can inform process improvements.</li>
-        <li>Linting Automation Suppression Count (LASC) and Testing 
-        Automation Suppression Count (TASC). While the validity of suppressions should be examined, too many suppressions are indicators that issues are being hidden instead of resolved.</li>
+        <li><b>Relative Incident Frequency (RIF)</b>. Is there a WCAG violation that seems to appear more than the others?</li>
+        <li><b>Conformance Exemption Count (CEC)</b>. What LOBs have exemptions? How many? Why? This can inform process improvements.</li>
+        <li><b>Linting Automation Suppression Count (LASC) and Testing 
+        Automation Suppression Count (TASC)</b>. While the validity of suppressions should be examined, too many suppressions are indicators that issues are being hidden instead of resolved.</li>
         </ul>
         </p>
         <p>It is necessary to understand the audit process. This will show how the proposed metrics can be useful both
@@ -151,26 +151,16 @@
           numbers are then fed into an audit report. This means that it would be useless, at first, to have a process to
           deal with an uptick in reported issues, since it only indicates that the audit has occurred.
         </p>
-        <p>
-          However, we should be able to implement improved monitoring as we increase our automated testing capabilities.
-          This will allow us to notify teams sooner if a product’s digital a11y conformance deteriorates
-          too rapidly (Conformance Deterioration Rate (CDR)).</p>
-        <p>
-          Additionally, by obtaining the baseline metrics for audits, we should be able to identify training
-          opportunities for each team. Teams with high audit numbers should automatically qualify for a11y training
-          (A11y Training Threshold (ATT)).</p>
-        <p>
-          These audit-related metrics could also inform processes from a business/legal perspective, as they can be used
-          to quantify risk (of legal action). When the risk is quantified, we can then quantify the reduction in that
-          risk by taking specific steps to remedy the issues; while this may be a business justification, the result is
-          that our users have an improved member experience.
+        <p>However, we should be able to implement improved monitoring as we increase our automated testing capabilities. This will allow us to notify teams sooner if a product’s digital a11y conformance deteriorates too rapidly (Conformance Deterioration Rate (CDR)).</p>
+        <p>Additionally, by obtaining the baseline metrics for audits, we should be able to identify training opportunities for each team. Teams with high audit numbers should automatically qualify for a11y training (A11y Training Threshold (ATT)).</p>
+        <p>These audit-related metrics could also inform processes from a business/legal perspective, as they can be used to quantify risk (of legal action). When the risk is quantified, we can then quantify the reduction in that risk by taking specific steps to remedy the issues; while this may be a business justification, the result is that our users have an improved member experience.
         </p>
         <p>
-          Finally, and perhaps most importantly, we can use these numbers to see what the persistent issues are. By
-          this, we mean, which violations happen the most often but for which we have no way to test (or prevent) a11y
-          issues? In these instances, we could consider a body of work where the component (simple or complex) is built
-          around the ability to test specific accessibility criteria. A horizontal initiative (or other appropriate
-          action) could then be used so teams can refactor their code to use the accessible replacement component.
+        Finally, and perhaps most importantly, we can use these numbers to see what the persistent issues are. By
+        this, we mean, which violations happen the most often but for which we have no way to test (or prevent) a11y
+        issues? In these instances, we could consider a body of work where the component (simple or complex) is built
+        around the ability to test specific accessibility criteria. A horizontal initiative (or other appropriate
+        action) could then be used so teams can refactor their code to use the accessible replacement component.
         </p>
         <hr>
         <h3>Metric: Internal Developer A11y Training
@@ -178,26 +168,21 @@
         </h3>
         <p>Potential items to track:</p>
         <ul aria-label="metrics related to developer training">
-          <li>Total UI Developer Count (TDC) – [TBD, frequency of update? Data must be accurate to be useful- what range is
-          considered acceptable?]</li>
-          <li>If a developer has received a11y-specific training while at the company [Question: we have training(s) they
-          can attend, but do we have a certification they can also complete?]</li>
-          <li>Product team that the developer is assigned to
-          If the developer has gone through something like an a11y champions program</li>
+          <li>Total UI Developer Count (TDC)</li>
+          <li>If a developer has received a11y-specific training while at the company</li>
+          <li>If the developer has gone through something like an a11y champions program</li>
           </ul>
           <p>
           It is logical to infer that required a11y-focused training for FE developers would reduce the number of accessibility issues
           in a given codebase.</p>
+          <p>When used in conjunction with tracking the TBC (or VBC) per line of business (LOB) or product team, we can determine if there is a reduction in reported accessibility issues for that product for teams that have received training.
+          </p>
           <p>
-          When used in conjunction with tracking the TBC (or VBC) per line of business (LOB) or product team, we can
-          determine if there is a reduction in reported accessibility issues for that product for teams who have
-          received training.
           This data could be made available to promotion committees to be used in craft quality measurements. For
           developers who have received training, is there an improvement in code quality? If so, we will be able to make
           the case for scheduled, mandatory accessibility training for engineers. Furthermore, if the data suggests that
           teams with alumni of an A11y Champions Program produce products with greater quality, there can be a business
           value that can be assigned to the investment in the program.
-
         </p>
         <hr>
         <h3>Metric: Internal Developer Support
