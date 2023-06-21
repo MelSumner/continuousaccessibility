@@ -34,7 +34,7 @@
       <h2 class="fluid-type">Historical challenges</h2>
       <p>There is not a sufficient way to quantify the full scope of digital accessibility (a11y) work, and a public recommendation for the quantification of accessibility work does not currently exist.</p>
       <p>Additionally, these challenges frequently exist:</p>
-      <ul role="list" aria-label="challenges">
+      <ul aria-label="challenges">
         <li>Limited visibility into the audit process and results. A11y audit results are typically only available for a few people. The results/reports themselves are often complex or difficult to use.</li>
         <li>Incomplete audit process. Often there is no context provided on an a11y scorecard/dashboard, so folks don’t have the correct insights needed to improve.</li>
         <li>Lack of sufficient methods to prevent regressions for tested code; while technical solutions for regression and snapshot testing exist, they are largely ineffective because they are not trained to recognize regression significance. Additionally, they do not often have policy support.</li>
@@ -177,7 +177,7 @@
           <span class="subtitle">Actionable Outcome(s): Process Improvement</span>
         </h3>
         <p>Potential items to track:</p>
-        <ul>
+        <ul aria-label="metrics related to developer training">
           <li>Total UI Developer Count (TDC) – [TBD, frequency of update? Data must be accurate to be useful- what range is
           considered acceptable?]</li>
           <li>If a developer has received a11y-specific training while at the company [Question: we have training(s) they
@@ -203,19 +203,16 @@
         <h3>Metric: Internal Developer Support
           <span class="subtitle">Actionable Outcome(s): Problem Analysis, Trend Development</span>
         </h3>
-        <p>One of the ways we could identify common problem areas for developers is by developing the means to analyze
-          the a11y-related channels internally. With sentiment analysis (or similar), we could determine what the commonly
-          asked questions are, for two reasons:</p>
-          <ul>
-            <li>
-          Some sort of automated tool/bot that could provide answers to common questions or provide links to relevant
+        <p>One of the ways we could identify common problem areas for developers is by developing the means to analyze discussion channels internally. With sentiment analysis (or similar), we could determine what the commonly asked questions are, for two reasons:</p>
+        <ul aria-label="metrics related to internal developer support">
+          <li>Some sort of automated tool/bot that could provide answers to common questions or provide links to relevant
           reference materials would reduce the amount of manual support required.</li>
           <li>The commonly asked questions could also be indicative of a problem area and could inform future tooling work.
           If we see the same question asked 100 times, it’s an indication that a broadly applied solution could be
           needed.</li>
           <li>We could then track the chat trends over time, to see if there are indicators of trends in the correct
           direction based on our actions.</li>
-        </p>
+        </ul>
         <hr>
         <blockquote>Think SRE, but for A11y.</blockquote>
         <hr>
