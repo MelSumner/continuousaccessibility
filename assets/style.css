@@ -60,7 +60,7 @@ html, body {
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   display: grid;
   grid-template-columns: 1fr;
@@ -168,11 +168,10 @@ li:last-of-type {
 
 h1, h2, h3, blockquote {
   font-family: 'Playfair Display', serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 blockquote {
-  font-weight: 500;
   font-style: italic;
   line-height: 1.6;
   text-align: center;
@@ -205,5 +204,5 @@ hr {
   clear: both;
   font-size: 1rem;
   margin: 0.5rem 0 0;
-  font-weight: bold;
+  font-weight: 500;
 }
