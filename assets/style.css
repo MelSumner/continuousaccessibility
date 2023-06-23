@@ -59,9 +59,7 @@ html, body {
 }
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 18px;
   font-weight: 400;
-  line-height: 1.5;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1.1fr auto;
@@ -130,11 +128,20 @@ h2.fluid-type {
   --fluid-type-max-size: 2.2;
 }
 
+h3.fluid-type {
+  --fluid-type-min-size: 1.2;
+  --fluid-type-max-size: 1.8;
+}
+
 blockquote.fluid-type {
   --fluid-type-min-size: 1.2;
   --fluid-type-max-size: 1.8;
 }
 
+.subtitle.fluid-type {
+  --fluid-type-min-size: 0.9;
+  --fluid-type-max-size: 1.25;
+}
 
 
 
@@ -166,9 +173,14 @@ li:last-of-type {
 }
 
 
-h1, h2, h3, blockquote {
+h1, h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
+}
+
+h3, blockquote {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
 }
 
 blockquote {
@@ -202,7 +214,6 @@ hr {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   display: block;
   clear: both;
-  font-size: 1rem;
-  margin: 0.5rem 0 0;
-  font-weight: 500;
+  margin: 0.3rem 0 0;
+  font-weight: 600;
 }
