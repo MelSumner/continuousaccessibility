@@ -119,7 +119,7 @@ footer {
 * SET LOCKS ON ELEMENTS
 */
 h1.fluid-type {
-  --fluid-type-min-size: 2;
+  --fluid-type-min-size: 1.8;
   --fluid-type-max-size: 4;
 }
 
