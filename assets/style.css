@@ -173,17 +173,14 @@ li:last-of-type {
 }
 
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
+h1, h2, h3 {
+  font-family: 'Yrsa', serif;
   font-weight: 600;
 }
 
-h3, blockquote {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-}
-
 blockquote {
+  font-family: 'Yrsa', serif;
+  font-weight: 500;
   font-style: italic;
   line-height: 1.6;
   text-align: center;
