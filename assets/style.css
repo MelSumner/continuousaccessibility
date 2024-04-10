@@ -234,8 +234,8 @@ section > a:first-of-type {
   --fluid-type-min-size: 1.5;
   --fluid-type-max-size: 2.2;
   font-family: 'Yrsa', serif;
-    font-weight: 500;
-	border: 1px solid red;
+  font-weight: 500;
+	border: 1px solid transparent;
 	width: 24px;
 	justify-content: center;
 	text-decoration: none;
@@ -246,7 +246,4 @@ section > a:first-of-type::hover {
 	text-decoration: underline;
 }
 
-section > h2 {
-  border: 1px solid blue;
-}
 
