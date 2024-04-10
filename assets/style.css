@@ -200,6 +200,7 @@ article {
 
 article > * + * {
   margin-top: 1.8em;
+  background-color: transparent;
 }
 
 section {
