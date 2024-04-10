@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
-  <meta name="description" content="Continuous Accessibility is an approach for ensuring that code intended to be displayed in browsers can be continuously checked and monitored for digital accessibility requirements">
+  <meta name="description"
+    content="Continuous Accessibility is an approach for ensuring that code intended to be displayed in browsers can be continuously checked and monitored for digital accessibility requirements">
   <meta property="og:url" content="https://continuousaccessibility.com" />
   <meta property="og:title" content="Continuous Accessibility" />
   <meta property="og:description"
@@ -17,7 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Yrsa:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Yrsa:wght@500&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -29,119 +31,198 @@
       <p class="intro"><b>Continuous Accessibility</b> is defined as the approach to ensuring that code intended to be
         displayed in browsers can be continuously checked and monitored for digital accessibility requirements through a
         novel application of existing software engineering concepts and Web Content Accessibility Guidelines (WCAG).</p>
-      <h2 class="fluid-type">Historical challenges</h2>
-      <p>There is not a sufficient way to quantify the full scope of digital accessibility (a11y) work, and a public recommendation for the quantification of accessibility work does not currently exist.</p>
-      <p>Additionally, these challenges frequently exist:</p>
-      <ul aria-label="challenges">
-        <li>Limited visibility into the audit process and results. A11y audit results are typically only available for a few people. The results/reports themselves are often complex or difficult to use.</li>
-        <li>Incomplete audit process. Sometimes there is not enough context provided on an accessibility scorecard or dashboard, so folks don’t have the correct insights needed to improve.</li>
-        <li>Lack of sufficient methods to prevent regressions for tested code; while technical solutions for regression and snapshot testing exist, they are largely ineffective because the solutions are not trained to recognize regression significance. Additionally, they do not often have policy support.</li>
-        <li>Static (linting) and dynamic (testing) checks can be turned off at the application level, at the code line level, and in other places.</li>
-        <li>Lack of incentive for developers to create accessible code. Development practices have yet to align in such a way that accessibility is considered as an integral part of shipping feature work.</li>
-        <li>Lack of metrics. Subject matter experts have the lived experience to know what kind of work needs to be done, but need the numbers to back them up. Clearly-defined metrics will give management and product teams the numbers they need to both understand and support this work.</li>
-        <li>The work is complex. In this case, complexity is calculated by the number of interactions that must take place for the work to be completed, the amount of time it will take to complete the project, and that some of the methods still need to be invented, since some do not currently exist.</li>
-        <li>Inability to benchmark. Accessibility is in a different kind of zone from other software engineering specialties, due to the legal requirements for digital accessibility. Avoiding the risk of legal liability is just one of the potential reasons that no public, industry-wide benchmarks exist.</li>
-      </ul>
+      <section>
+        <a class="fluid-type" href="#section-historical-challenges" aria-labelledby="section-historical-challenges">
+          <span aria-hidden="true">§</span>
+        </a><h2 id="section-historical-challenges" class="fluid-type">Historical challenges</h2>
+        <p>There is not yet a sufficient, publicly-available way to quantify the full scope of digital accessibility
+          (a11y) work, and a public recommendation for the quantification of accessibility work does not currently
+          exist.</p>
+        <p>Additionally, these challenges frequently exist:</p>
+        <ul aria-label="challenges">
+          <li>Limited visibility into the audit process and results. A11y audit results are typically only available for
+            a few people. The results/reports themselves are often complex or difficult to use.</li>
+          <li>Incomplete audit process. Sometimes there is not enough context provided on an accessibility scorecard or
+            dashboard, so folks don’t have the correct insights needed to improve.</li>
+          <li>Lack of sufficient methods to prevent regressions for tested code; while technical solutions for
+            regression and snapshot testing exist, they are largely ineffective because the solutions are not trained to
+            recognize regression significance. Additionally, they do not often have policy support.</li>
+          <li>Static (linting) and dynamic (testing) checks can be turned off at the application level, at the code line
+            level, and in other places.</li>
+          <li>Lack of incentive for developers to create accessible code. Development practices have yet to align in
+            such a way that accessibility is considered as an integral part of shipping feature work.</li>
+          <li>Lack of metrics. Subject matter experts have the lived experience to know what kind of work needs to be
+            done, but need the numbers to back them up. Clearly-defined metrics will give management and product teams
+            the numbers they need to both understand and support this work.</li>
+          <li>The work is complex. In this case, complexity is calculated by the number of interactions that must take
+            place for the work to be completed, the amount of time it will take to complete the project, and that some
+            of the methods still need to be invented, since some do not currently exist.</li>
+          <li>Inability to benchmark. Accessibility is in a different kind of zone from other software engineering
+            specialties, due to the legal requirements for digital accessibility. Avoiding the risk of legal liability
+            is just one of the potential reasons that no public, industry-wide benchmarks exist.</li>
+        </ul>
+      </section>
       <hr>
-      <blockquote class="fluid-type"><p>Digital accessibility can be hard.
-        Let's automate it.</p></blockquote>
+      <blockquote class="fluid-type">
+        <p>Digital accessibility can be hard.
+          Let's automate it.</p>
+      </blockquote>
       <hr>
-      <h2 class="fluid-type">The strategy</h2>
-      <p>Comprehensive accessibility conformance for digital products represents an unsolved, complex problem and known to be without a reliable, transparent route to success. Further adding to the complexity, standards are still being developed for native applications on devices such as mobile phones and wearables.</p>
-      <p>In practice, achieving a given WCAG criterion requires that a set of actions, implementations, or policy updates that individually ensure for some portion of the success criterion (e.g., a particular use case) is met. As such, the most effective means of generating rapid, high-impact accessibility improvements for digital products is to deconstruct a WCAG success criterion into a subset of accessibility quality-control mechanisms: action steps that can be taken to comprehensively achieve an accessible experience.</p>
-      <p>The process by which efficient improvements can be achieved matches that of the software development process in general-- tightly scoped, iterative, and distributed.</p>
-      <p>A Continuous Accessibility strategy, then, can be divided into three parts:</p>
-      <ul aria-label="continuous accessibility strategic parts">
-        <li>A plan for the code that already exists</li>
-        <li>A plan for the code that will be created</li>
-        <li>A method to measure and report progress</li>
-      </ul>
-      <p>I will only briefly cover the first two (at least for now), since I have previously spoken about this topic, most recently at GitHub Universe, and the <a href="https://noti.st/melsumner/NHtR1N/slides" rel="external">slides are available on my noti.st profile</a>.</p>
+      <section>
+        <a class="fluid-type" href="#section-strategy" aria-labelledby="section-strategy">
+          <span aria-hidden="true">§</span>
+        </a><h2 id="section-strategy" class="fluid-type">The strategy</h2>
+        <p>Comprehensive accessibility conformance for digital products represents an unsolved, complex problem and
+          known to be without a reliable, transparent route to success. Further adding to the complexity, standards are
+          still being developed for native applications on devices such as mobile phones and wearables.</p>
+        <p>In practice, achieving a given WCAG criterion requires that a set of actions, implementations, or policy
+          updates that individually ensure for some portion of the success criterion (e.g., a particular use case) is
+          met. As such, the most effective means of generating rapid, high-impact accessibility improvements for digital
+          products is to deconstruct a WCAG success criterion into a subset of accessibility quality-control mechanisms:
+          action steps that can be taken to comprehensively achieve an accessible experience.</p>
+        <p>The process by which efficient improvements can be achieved matches that of the software development process
+          in general-- tightly scoped, iterative, and distributed.</p>
+        <p>A Continuous Accessibility strategy, then, can be divided into three parts:</p>
+        <ul aria-label="continuous accessibility strategic parts">
+          <li>A plan for the code we already have (existing code)</li>
+          <li>A plan for the code we will create (future code)</li>
+          <li>A plan to measure our progress (metrics)</li>
+        </ul>
+        <p>I will only briefly cover the first two (at least for now), since I have previously spoken about this topic,
+          most recently at GitHub Universe, and the <a href="https://noti.st/melsumner/NHtR1N/slides"
+            rel="external">slides are available on my noti.st profile</a>.</p>
+      </section>
       <hr>
-      <h2 class="fluid-type">The code that already exists</h2>
-      <p>Any plans made to improve accessibility in digital products should include plans for the code that already exists. It is necessary to consider the age of the code base. How long has that code been around? This will probably lead to conversations about dependencies that need to be upgraded. 
-      </p>
-      <p>How do we plan for upgrades? It’s great if the accessibility of a common dependency is improved, but what does this mean for existing users? What does the upgrade path look like? This will probably lead to conversations about the ease…or not…of delivering the latest and greatest.</p>
-      <p>Delivery of new features or developer tools also needs to be carefully considered. Backwards compatibility and stability are important and, let’s face it, sometimes overlooked in our race to build new awesome things. Unless this has been done thoughtfully and purposefully, the very people we are trying to empower may reject what they are being offered.</p>
+      <section>
+        <a class="fluid-type" href="#section-existing-code" aria-labelledby="section-existing-code">
+          <span aria-hidden="true">§</span>
+        </a><h2 id="section-existing-code" class="fluid-type>">Existing Code</h2>
+        <p>Any plans made to improve accessibility in digital products should include plans for the code that already
+          exists. It is necessary to consider the age of the code base. How long has that code been around? This will
+          probably lead to conversations about dependencies that need to be upgraded.
+        </p>
+        <p>How do we plan for upgrades? It’s great if the accessibility of a common dependency is improved, but what
+          does this mean for existing users? What does the upgrade path look like? This will probably lead to
+          conversations about the ease…or not…of delivering the latest and greatest.</p>
+        <p>Delivery of new features or developer tools also needs to be carefully considered. Backwards compatibility
+          and stability are important and, let’s face it, sometimes overlooked in our race to build new awesome things.
+          Unless this has been done thoughtfully and purposefully, the very people we are trying to empower may reject
+          what they are being offered.</p>
+      </section>
       <hr>
-      <h2 class="fluid-type">The code that will be created</h2>
-      <p>Let’s talk about future code. It is important to plan for future code, as failure to do so increases the likelihood of repeating past mistakes.</p>
-      <p>Who knows what will come next? The way code was written ten years ago is different from the way code is written today...and who knows how code will be written ten years from now?
-      </p>
-      <p>So what does a strategy need to prepare for these unknown unknowns?</p>
-      <p>Let’s consider <a href="https://continuousdelivery.com/principles/" rel="external">the principles of continuous delivery</a>, especially the third one: <em>computers perform repetitive tasks, people solve problems</em>. When engineers solve the problem of automating accessibility checks, computers can perform the repetitive tasks of automatically checking code.
-      </p>
+      <section>
+        <a class="fluid-type" href="#section-future-code" aria-labelledby="section-future-code">
+          <span aria-hidden="true">§</span>
+        </a><h2 id="section-future-code" class="fluid-type">Future Code</h2>
+        <p>Let’s talk about future code. It is important to plan for future code, as failure to do so increases the
+          likelihood of repeating past mistakes.</p>
+        <p>Who knows what will come next? The way code was written ten years ago is different from the way code is
+          written today...and who knows how code will be written ten years from now?
+        </p>
+        <p>So what does a strategy need to prepare for these unknown unknowns?</p>
+        <p>Let’s consider <a href="https://continuousdelivery.com/principles/" rel="external">the principles of
+            continuous delivery</a>, especially the third one: <em>computers perform repetitive tasks, people solve
+            problems</em>. When engineers solve the problem of automating accessibility checks, computers can perform
+          the repetitive tasks of automatically checking code.
+        </p>
+      </section>
       <hr>
-      <blockquote class="fluid-type"><p>Goodhart's law: When a measure becomes a target, it ceases to be a good measure.</p></blockquote>
+      <blockquote class="fluid-type">
+        <p>Goodhart's law: When a measure becomes a target, it ceases to be a good measure.</p>
+      </blockquote>
       <hr>
-      <h2 class="fluid-type">Measuring progress</h2>
-      <p>On to the third key part of this strategy- plan to measure and report progress. Right now, there is no shared, public standard for metrics in accessibility engineering; my vision is to change that. Metrics play an essential part of a Continuous Accessibility strategy. After all, metrics and reporting is how the business is empowered the to provide essential things. Things like time. Things like budget. Things like vocalization of priorities. When ways to measure this work are provided, a gap that has been historically unfilled and ignored can be bridged.</p>
-      <p>These are the metrics I think would be reasonable to consider when creating a progress-tracking strategy.</p>
-      <h3 class="fluid-type">Metric: Total Criteria Count
-        <span class="subtitle fluid-type">Actionable Outcome(s): Goal Setting</span>
-      </h3>
-      <p>
-      The <b>Total Criteria Count (TCC)</b> is the first item to establish as it will be the basis for all other metrics.
-      It is also likely to take the most amount of time to establish (relative to other metrics). An exact count of all WCAG criteria with which a digital product must comply must be established- with the full understanding that this count may (some may even argue, <em>should</em>) change over time. These changes should be tracked.</p>
-      <p>
-        The Total Criteria Count should be an itemized list that includes:</p>
-      <ul aria-label="total criteria count">
-        <li>WCAG Success Criteria</li>
-        <li>Criteria that are not already reflected in WCAG criteria (perhaps related to tooling, not covered by web
-          content guidelines)</li>
-        <li>Known techniques</li>
-        <li>Common failures</li>
-        <li>Failures as identified by audit findings</li>
-      </ul>
-      <p>As the ability to identify root causes increases, we should be able to add to this list. The more detail we
-        have,
-        the better it will be, since success criteria cover generalities rather than specifics. For example, <a
-          href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" rel="external">WCAG 1.3.1
-          (Info and Relationships)</a> is a single success criterion but relates to 25+ different failure scenarios. It
-        may not be meaningful enough to simply indicate a decrease in issues related to a single WCAG success criterion;
-        the metrics may need to be more granular than that. </p>
-      <p>
-        The list MUST be easily available and have the ability to track change over time.</p>
-      <hr>
-      <h3 class="fluid-type">
-        Metric: Automation Capabilities
-        <span class="subtitle fluid-type">Actionable Outcome(s): Problem Analysis, Goal Setting</span>
-      </h3>
-      <p>We must then identify additional baseline numbers from TCC line items, related to automation:</p>
-      <ul aria-label="metrics for setting a baseline">
-        <li><b>Automated Linting Criteria Count
-          (ALCC)</b>: Criteria for which we can provide automated linting (static analysis).</li>
-        <li><b>Automated Testing Criteria Count
-          (ATCC)</b>: Criteria for which we can provide automated testing (dynamic analysis).</li>
-        <li><b>Developer Test Criteria Count (DTCC)</b>: Criteria that require developer-authored tests.</li>
-        <li><b>Manual Test Criteria Count (MTCC)</b>: Criteria that require manual testing.</li>
-      </ul>
-      <p>
-        We should determine which line items from TCC currently require manual testing but could reasonably have
-        automated tests. This can help to determine future work. This number may also change over time, given a few
-        variables:</p>
-      <ul aria-label="variables that may influence criteria for which manual checks are currently required">
-        <li>Reduction in number of ways to approach any given UI component (either self-imposed or via engineering policy)</li>
-        <li>Deeper analysis of a line item may show that the status may change (from “possible to automate” to “manual
-          check” or vice versa)</li>
-        <li>Changes to the success criteria (as WCAG grows to include devices and not just web, etc.)</li>
-      </ul>
-      </p>
-      <hr>
-      <h3 class="fluid-type">Metric: Audit Results
-        <span class="subtitle fluid-type">Actionable Outcome(s): Problem Analysis, Trend Development</span>
-      </h3>
-      <p>If apps are audited and scorecards are produced, these metrics are indicators of overall progress. As such, they could be analyzed from a few angles:</p>
-      <ul aria-label="metrics that may indicate progress trends">
-        <li><b>Total Bug Count (TBC)</b>: Further breakdowns may be justifiable, such as by Line of Business or by WCAG Success Criteria</li>
-        <li><b>Valid Bug Count (VBC)</b>: It may be more meaningful to look at VBC than TBC, or at least normalize the data to account for the mean)</li>
-        <li><b>Bug Severity Count (ISC)</b>: For bugs that are violations of WCAG conformance, we can categorize based on impact to the user: Severe, Critical, Major, and Minor.
-        </li>
-        <li><b>Time To Resolution (TTR)</b>: How long does it take each team to resolve violations? What percent of the resolved violations are within the SLA for resolution? What are the blockers to violation resolution (is there a recognizable pattern that could inform tooling)? What is the severity of those blockers?</li>
-        <li><b>Relative Incident Frequency (RIF)</b>: Is there a WCAG violation that seems to appear more than the others?</li>
-        <li><b>Conformance Exemption Count (CEC)</b>: What LOBs have exemptions? How many? Why? This can inform process improvements.</li>
-        <li><b>Linting Automation Suppression Count (LASC)</b> and <b>Testing 
-        Automation Suppression Count (TASC)</b>: While the validity of suppressions should be examined, too many suppressions could be an indication that issues are being hidden instead of resolved.</li>
+      <section>
+        <a class="fluid-type" href="#section-metrics" aria-labelledby="section-metrics">
+          <span aria-hidden="true">§</span>
+        </a><h2 id="section-metrics" class="fluid-type">Metrics</h2>
+        <p>On to the third key part of this strategy- plan to measure and report progress. Right now, there is no
+          shared, public standard for metrics in accessibility engineering; my vision is to change that. Metrics play an
+          essential part of a Continuous Accessibility strategy. After all, metrics and reporting is how the business is
+          empowered the to provide essential things. Things like time. Things like budget. Things like vocalization of
+          priorities. When ways to measure this work are provided, a gap that has been historically unfilled and ignored
+          can be bridged.</p>
+        <p>These are the metrics I think would be reasonable to consider when creating a progress-tracking strategy.</p>
+        <h3 class="fluid-type">Metric: Total Criteria Count
+          <span class="subtitle fluid-type">Actionable Outcome(s): Goal Setting</span>
+        </h3>
+        <p>
+          The <b>Total Criteria Count (TCC)</b> is the first item to establish as it will be the basis for all other
+          metrics.
+          It is also likely to take the most amount of time to establish (relative to other metrics). An exact count of
+          all WCAG criteria with which a digital product must comply must be established- with the full understanding
+          that this count may (some may even argue, <em>should</em>) change over time. These changes should be tracked.
+        </p>
+        <p>
+          The Total Criteria Count should be an itemized list that includes:</p>
+        <ul aria-label="total criteria count">
+          <li>WCAG Success Criteria</li>
+          <li>Criteria that are not already reflected in WCAG criteria (perhaps related to tooling, not covered by web
+            content guidelines)</li>
+          <li>Known techniques</li>
+          <li>Common failures</li>
+          <li>Failures as identified by audit findings</li>
+        </ul>
+        <p>As the ability to identify root causes increases, we should be able to add to this list. The more detail we
+          have,
+          the better it will be, since success criteria cover generalities rather than specifics. For example, <a
+            href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" rel="external">WCAG 1.3.1
+            (Info and Relationships)</a> is a single success criterion but relates to 25+ different failure scenarios.
+          It
+          may not be meaningful enough to simply indicate a decrease in issues related to a single WCAG success
+          criterion;
+          the metrics may need to be more granular than that. </p>
+        <p>
+          The list MUST be easily available and have the ability to track change over time.</p>
+        <hr>
+        <h3 class="fluid-type">
+          Metric: Automation Capabilities
+          <span class="subtitle fluid-type">Actionable Outcome(s): Problem Analysis, Goal Setting</span>
+        </h3>
+        <p>We must then identify additional baseline numbers from TCC line items, related to automation:</p>
+        <ul aria-label="metrics for setting a baseline">
+          <li><b>Automated Linting Criteria Count
+              (ALCC)</b>: Criteria for which we can provide automated linting (static analysis).</li>
+          <li><b>Automated Testing Criteria Count
+              (ATCC)</b>: Criteria for which we can provide automated testing (dynamic analysis).</li>
+          <li><b>Developer Test Criteria Count (DTCC)</b>: Criteria that require developer-authored tests.</li>
+          <li><b>Manual Test Criteria Count (MTCC)</b>: Criteria that require manual testing.</li>
+        </ul>
+        <p>
+          We should determine which line items from TCC currently require manual testing but could reasonably have
+          automated tests. This can help to determine future work. This number may also change over time, given a few
+          variables:</p>
+        <ul aria-label="variables that may influence criteria for which manual checks are currently required">
+          <li>Reduction in number of ways to approach any given UI component (either self-imposed or via engineering
+            policy)</li>
+          <li>Deeper analysis of a line item may show that the status may change (from “possible to automate” to “manual
+            check” or vice versa)</li>
+          <li>Changes to the success criteria (as WCAG grows to include devices and not just web, etc.)</li>
+        </ul>
+        </p>
+        <hr>
+        <h3 class="fluid-type">Metric: Audit Results
+          <span class="subtitle fluid-type">Actionable Outcome(s): Problem Analysis, Trend Development</span>
+        </h3>
+        <p>If apps are audited and scorecards are produced, these metrics are indicators of overall progress. As such,
+          they could be analyzed from a few angles:</p>
+        <ul aria-label="metrics that may indicate progress trends">
+          <li><b>Total Bug Count (TBC)</b>: Further breakdowns may be justifiable, such as by Line of Business or by
+            WCAG Success Criteria</li>
+          <li><b>Valid Bug Count (VBC)</b>: It may be more meaningful to look at VBC than TBC, or at least normalize the
+            data to account for the mean)</li>
+          <li><b>Bug Severity Count (ISC)</b>: For bugs that are violations of WCAG conformance, we can categorize based
+            on impact to the user: Severe, Critical, Major, and Minor.
+          </li>
+          <li><b>Time To Resolution (TTR)</b>: How long does it take each team to resolve violations? What percent of
+            the resolved violations are within the SLA for resolution? What are the blockers to violation resolution (is
+            there a recognizable pattern that could inform tooling)? What is the severity of those blockers?</li>
+          <li><b>Relative Incident Frequency (RIF)</b>: Is there a WCAG violation that seems to appear more than the
+            others?</li>
+          <li><b>Conformance Exemption Count (CEC)</b>: What LOBs have exemptions? How many? Why? This can inform
+            process improvements.</li>
+          <li><b>Linting Automation Suppression Count (LASC)</b> and <b>Testing
+              Automation Suppression Count (TASC)</b>: While the validity of suppressions should be examined, too many
+            suppressions could be an indication that issues are being hidden instead of resolved.</li>
         </ul>
         </p>
         <p>It is necessary to understand the audit process. This will show how the proposed metrics can be useful both
@@ -149,16 +230,25 @@
           numbers are then fed into an audit report. This means that it may be useless, at first, to have a process to
           deal with an uptick in reported issues, since it only indicates that the audit has occurred.
         </p>
-        <p>However, it should be possible to implement improved monitoring with an increase in automated testing capabilities. This will allow teams to be notified sooner if a product’s digital a11y conformance deteriorates too rapidly (<b>Conformance Deterioration Rate (CDR)</b>).</p>
-        <p>Additionally, by obtaining the baseline metrics for audits, we should be able to identify training opportunities for each team. Teams with high audit numbers should automatically qualify for a11y training (<b>A11y Training Threshold (ATT)</b>).</p>
-        <p>These audit-related metrics could also inform processes from a business/legal perspective, as they can be used to quantify risk (of legal action, costs, and other things). When the risk is quantified, the reduction in that risk by taking specific steps to remedy the issues can also be determined; while this may be a business justification, the result is that users have an improved default experience.
+        <p>However, it should be possible to implement improved monitoring with an increase in automated testing
+          capabilities. This will allow teams to be notified sooner if a product’s digital a11y conformance deteriorates
+          too rapidly (<b>Conformance Deterioration Rate (CDR)</b>).</p>
+        <p>Additionally, by obtaining the baseline metrics for audits, we should be able to identify training
+          opportunities for each team. Teams with high audit numbers should automatically qualify for a11y training
+          (<b>A11y Training Threshold (ATT)</b>).</p>
+        <p>These audit-related metrics could also inform processes from a business/legal perspective, as they can be
+          used to quantify risk (of legal action, costs, and other things). When the risk is quantified, the reduction
+          in that risk by taking specific steps to remedy the issues can also be determined; while this may be a
+          business justification, the result is that users have an improved default experience.
         </p>
         <p>
-        Finally, and perhaps most importantly, these numbers can be used to see what the persistent issues are. By
-        this, I mean, which violations happen the most often, but lack a meaningful automated way to test or prevent these issues?
-        In these instances, a body of work where the component (simple or complex) is built
-        around the ability to test specific accessibility criteria could be considered. A horizontal initiative (or other appropriate
-        action) could then be used, so teams could refactor their code to use the accessible replacement component.
+          Finally, and perhaps most importantly, these numbers can be used to see what the persistent issues are. By
+          this, I mean, which violations happen the most often, but lack a meaningful automated way to test or prevent
+          these issues?
+          In these instances, a body of work where the component (simple or complex) is built
+          around the ability to test specific accessibility criteria could be considered. A horizontal initiative (or
+          other appropriate
+          action) could then be used, so teams could refactor their code to use the accessible replacement component.
         </p>
         <hr>
         <h3 class="fluid-type">Metric: Internal Developer A11y Training
@@ -168,14 +258,19 @@
         <ul aria-label="metrics related to developer training">
           <li><b>Total UI Developer Count (TDC)</b>: How many developers are contributing UI code?</li>
           <li>Training: Has a developer has received a11y-specific training while at the company?</li>
-          <li>Champion: Has the developer has gone through something like an <a href="https://engineering.linkedin.com/blog/2019/05/scaling-accessibility-through-a11y-champions-program" rel="external">a11y champions program</a>?</li>
-          </ul>
-          <p>
-          It is logical to infer that required a11y-focused training for FE developers would reduce the number of accessibility issues
+          <li>Champion: Has the developer has gone through something like an <a
+              href="https://engineering.linkedin.com/blog/2019/05/scaling-accessibility-through-a11y-champions-program"
+              rel="external">a11y champions program</a>?</li>
+        </ul>
+        <p>
+          It is logical to infer that required a11y-focused training for FE developers would reduce the number of
+          accessibility issues
           in a given codebase.</p>
-          <p>When used in conjunction with tracking the TBC (or VBC) per line of business (LOB) or product team, we can determine if there is a reduction in reported accessibility issues for that product for teams that have received training.
-          </p>
-          <p>
+        <p>When used in conjunction with tracking the TBC (or VBC) per line of business (LOB) or product team, we can
+          determine if there is a reduction in reported accessibility issues for that product for teams that have
+          received training.
+        </p>
+        <p>
           This data could be made available to promotion committees to be used in craft quality measurements. For
           developers who have received training, is there an improvement in code quality? If so, we will be able to make
           the case for scheduled, mandatory accessibility training for engineers. Furthermore, if the data suggests that
@@ -186,29 +281,37 @@
         <h3 class="fluid-type">Metric: Internal Developer Support
           <span class="subtitle fluid-type">Actionable Outcome(s): Problem Analysis, Trend Development</span>
         </h3>
-        <p>One of the ways we could identify common problem areas for developers is by developing the means to analyze discussion channels internally. With sentiment analysis (or similar), we could determine what the commonly asked questions are, for two reasons:</p>
+        <p>One of the ways we could identify common problem areas for developers is by developing the means to analyze
+          discussion channels internally. With sentiment analysis (or similar), we could determine what the commonly
+          asked questions are, for two reasons:</p>
         <ul aria-label="metrics related to internal developer support">
           <li>An automated tool or bot that could provide answers to common questions or provide links to relevant
-          reference materials would reduce the amount of manual support required.</li>
-          <li>The commonly asked questions could also be indicative of a problem area and could inform future tooling work.
-          If we see the same question asked 100 times, it’s an indication that a broadly applied solution could be
-          useful.</li>
+            reference materials would reduce the amount of manual support required.</li>
+          <li>The commonly asked questions could also be indicative of a problem area and could inform future tooling
+            work.
+            If we see the same question asked 100 times, it’s an indication that a broadly applied solution could be
+            useful.</li>
           <li>Tracking chat trends over time could indicate trends.</li>
         </ul>
-        <hr>
-        <blockquote class="fluid-type"><p>Think SRE, but for A11Y.</p></blockquote>
-        <hr>
+      </section>
+      <hr>
+      <blockquote class="fluid-type">
+        <p>Think SRE, but for A11Y.</p>
+      </blockquote>
+      <hr>
     </article>
     <article>
       <h2 class="fluid-type">Future topics</h2>
-      <p>Coming soon: Trend analysis, overall project health, continuous improvement (maintenance and support), and additional organizational challenges.</p>
+      <p>Coming soon: Trend analysis, overall project health, continuous improvement (maintenance and support), and
+        additional organizational challenges.</p>
       <hr>
     </article>
   </main>
   <footer class="footer">
     <p>
       <small>
-        &copy; 2019 <a href="https://melanie.codes" rel="external">Melanie Sumner</a>. Hosted by <a href="https://netlify.com" rel="external">Netlify</a>.
+        &copy; 2019 <a href="https://melanie.codes" rel="external">Melanie Sumner</a>. Hosted by <a
+          href="https://netlify.com" rel="external">Netlify</a>.
       </small>
     </p>
   </footer>

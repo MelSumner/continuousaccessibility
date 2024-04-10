@@ -172,6 +172,9 @@ li:last-of-type {
   margin-bottom: 0;
 }
 
+h1 {
+  letter-spacing: -0.1rem;
+}
 
 h1, h2, h3 {
   font-family: 'Yrsa', serif;
@@ -199,6 +202,10 @@ article > * + * {
   margin-top: 1.8em;
 }
 
+section {
+  margin-top: 0;
+}
+
 hr {
   border: none;
   height: 1px;
@@ -214,3 +221,32 @@ hr {
   margin: 0;
   font-weight: 600;
 }
+
+section > a:first-of-type,
+section > h2 {
+	display: inline-flex;
+	margin: 0;
+  margin-block-start: 0; // seems to be in the browser by default
+  margin-block-end: 0 !important; // seems to be in the browser by default
+}
+
+section > a:first-of-type {
+  --fluid-type-min-size: 1.5;
+  --fluid-type-max-size: 2.2;
+  font-family: 'Yrsa', serif;
+    font-weight: 500;
+	border: 1px solid red;
+	width: 24px;
+	justify-content: center;
+	text-decoration: none;
+  line-height: 1.2; // make it consistent with the h2
+}
+
+section > a:first-of-type::hover {
+	text-decoration: underline;
+}
+
+section > h2 {
+  border: 1px solid blue;
+}
+
